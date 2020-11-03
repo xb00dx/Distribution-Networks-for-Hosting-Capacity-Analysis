@@ -25,7 +25,7 @@ case_comments = ...
 
 excase = 'case5';
 
-thiscase = 'case56_sce_original';
+thiscase = 'case56_sce';
 exmpc = loadcase(excase);
 
 %% Some Parameters

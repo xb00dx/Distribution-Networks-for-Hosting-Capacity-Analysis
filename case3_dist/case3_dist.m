@@ -14,15 +14,15 @@ mpc.baseMVA = 1;
 %% bus data
 % bus_i  type  Pd  Qd  Gs  Bs  area  Vm  Va  baseKV  zone  Vmax  Vmin
 mpc.bus = [
-  1  1  0.2000  0.2000  0.0000  0.0000  1  1  0  12.5  1  1.05  0.95
-  2  1  0.2000  0.2000  0.0000  0.0000  1  1  0  12.5  1  1.05  0.95
-  3  3  0       0  0.0000  0.0000  1  1  0  12.5  1  1.05  0.95
+  1  1  0.4000  0.2000  0.0000  0.0000  1  1  0  12.5  1  1.1  0.9
+  2  1  0.4000  0.2000  0.0000  0.0000  1  1  0  12.5  1  1.1  0.9
+  3  3  0       0  0.0000  0.0000  1  1  0  12.5  1  1.1  0.9
 ];
 
 %% generator data
 % bus  Pg  Qg  Qmax  Qmin Vg  mBase  status  Pmax  Pmin  Pc1  Pc2  Qc1min  Qc1max  Qc2min  Qc2max  ramp_agc  ramp_10  ramp_30  ramp_q  apf
 mpc.gen = [
-3  0.0000  0.0000  0.8  -0.8  1.0500  1  1   0.8  -0.8  0  0  0  0  0  0  0  0  0  0  0
+3  0.0000  0.0000  0.3  -0.3  1.0500  1  1   0.8  -0.2  0  0  0  0  0  0  0  0  0  0  0
 ];
 
 %% branch data
@@ -33,14 +33,9 @@ mpc.gen = [
 % ];
 %% (r and x specified in ohms here, converted to p.u. below)
 % fbus  tbus  r  x  b  rateA  rateB  rateC  ratio  angle  status  angmin  angmax
-% mpc.branch = [
-% 	3	1	0.0922	0.0470	0	0.65	0	0	0	0	1	-360	360;
-% 	1	2	0.4930	0.2511	0	0.5	0	0	0	0	1	-360	360;    
-% ];
-
 mpc.branch = [
-	3	1	0.3922	0.2470	0	0.8	0	0	0	0	1	-360	360;
-	1	2	0.4930	0.2511	0	0.4	0	0	0	0	1	-360	360;    
+	3	1	0.0922	0.0470	0	0.65	0	0	0	0	1	-360	360;
+	1	2	0.4930	0.2511	0	0.5	0	0	0	0	1	-360	360;    
 ];
 
 % [PQ, PV, REF, NONE, BUS_I, BUS_TYPE, PD, QD, GS, BS, BUS_AREA, VM, ...
